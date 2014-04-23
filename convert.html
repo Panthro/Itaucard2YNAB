@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ItauCard 2 YNAB CSV </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="//code.jquery.com/jquery-git2.min.js"></script>
+    </head>
+    <body>
+        <textarea id="fatura-text" name="fatura" cols="80" rows="30"></textarea>
+        <textarea id="fatura-converted" name="fatura" cols="80" rows="30"></textarea>
+        <br />
+        <div id="result"></div>
+        <script>
+            config = {};
+            config.linePattern = "";
+            config.newLine = "\n";
+            config.commonHeaders = "Date,Payee,Value";
+            config.YNABHeaders = "Date,Payee,Category,Memo,Outflow,Inflow";
+            config.populateMatches = function(fatura){
+                var regex = /(\d*\/\d*)\t(.*)\t(-?\d*,\d*)/g;
+                var match = null;
+                $("#fatura-converted").append(config.YNABHeaders);
+                $("#fatura-converted").append(config.newLine)
+                var year = new Date().getFullYear();
+                while((match = regex.exec(fatura)) !== null){
+                    $("#fatura-converted").append(match[1]+"/"+year+","+match[2]+",,,");
+                    if(match[3].indexOf("-") == -1){
+                        $("#fatura-converted").append(match[3].replace(",",".")+",");
+                    }else{
+                        $("#fatura-converted").append(","+match[3].replace(",",".").replace("-",""));
+                    }
+                    
+                    $("#fatura-converted").append(config.newLine);
+                }
+            };
+            
+            $("#fatura-text").change(function(event){
+                $("#fatura-converted").html("");
+                config.populateMatches($("#fatura-text").val());
+            })
+        </script>
+    </body>
+</html>
