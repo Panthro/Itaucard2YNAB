@@ -30,7 +30,7 @@ Total dos lançamentos inter. em R$	xx,xx
 Dólar de conversão	x,xx
 ```
 
-3. Acessar a ferramenta [aqui](http://htmlpreview.github.io/?https://raw.githubusercontent.com/Panthro/Itaucard2YNAB/master/convert.html)
+3. Acessar a ferramenta [___aqui___](https://rawgit.com/Panthro/Itaucard2YNAB/master/convert.html)
 
 4. Colar o texto da fatura copiado no passo 2 na textarea da __Esquerda__
 5. Clicar na textarea da ___Direita___
