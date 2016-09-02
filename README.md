@@ -1,6 +1,10 @@
 Itaucard2YNAB
 =============
 
+Motivação
+=============
+https://www.facebook.com/itau/posts/769948679701112
+
 Se você como eu sofre tentando importar seus dados do cartão de crédio Itau Card no YNAB (ou em qualquer outro software de gerenciamento de finanças), então agora você tem uma página pra te ajudar.
 
 Como funciona?
