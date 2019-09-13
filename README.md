@@ -20,7 +20,7 @@ Crédito do cartão final (0000)	0,00
 Débito do cartão final (0000)	xx,xx
 
 Lançamentos internacionais
-RAFAEL AP ROMAN DA SILVA (0000)
+RAFAEL ROMAN (0000)
 DATA	MOVIMENTAÇÃO	VALOR EM R$
 03/04	Loja 1	22,31
  	UNITED STATES	xx,xx (U.S.DOLLAR)
